@@ -18,12 +18,11 @@ import {
 import ToDoList from './ToDoList';
 import ToDoForm from './ToDoForm';
 
-
 function App() {
   return (
     <SafeAreaView>
-        <ToDoList/ >
-        <ToDoForm/ >
+        <ToDoList />
+        <ToDoForm />
     </SafeAreaView>
   );
 }
