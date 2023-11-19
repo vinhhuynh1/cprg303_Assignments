@@ -10,14 +10,19 @@ import {
   Button
 } from 'react-native';
 
-export default function ToDoForm() {
+export default function ToDoForm(addTask) {
+    const [taskText, setTaskText] = React.useState('');
+
     return (
         <View style={styles.form}>
             <TextInput
             style={styles.input}
             placeholder="Add a new task..."
+            onChange={(text) => setTaskText(text)}
+            value={taskText} 
             />
-            <Button title="Add" />
+            <Button title="Add" onPress={()=>addTask(taskText)} 
+            />
         </View>
     );
 }
@@ -38,5 +43,4 @@ const styles = StyleSheet.create({
       paddingVertical: 5,
       marginRight: 10,
     },
-  });
-  
+  })
